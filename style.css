@@ -237,6 +237,9 @@ h1 {
         max-width: 1000px;
         margin: auto;
     }
+    main {
+        height: 100vh;
+    }
     main::after {
         left: -50px;
         height: 80vh;
