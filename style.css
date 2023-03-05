@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+main {
+    position: relative;
+    padding: 50px 30px;
+}
+main::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: -200px;
+    height: 400px;
+    width: 400px;
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 300px 200px 0 0;
+    z-index: -1;
+}
+main::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -200px;
+    height: 400px;
+    width: 400px;
+    background-color: hsl(264, 100%, 61%);
+    border-radius: 0 0 300px 200px;
+    z-index: -1;
+}
+.hero {
+    text-align: center;
+}
+.mobile {
+    background-color: hsl(0, 0%, 100%);
+    max-width: 280px;
+    margin: auto;
+    padding: 12px 0;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 20px 20px 20px hsl(264, 100%, 61%, 0.2), -5px -5px 20px hsl(264, 100%, 61%, 0.2);
+}
+.mobile::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+}
+.mobile-inner {
+    width: 92%;
+    margin: auto;
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 20px;
+}
+.chat-head {
+    width: 100%;
+    background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 0 15px 40px;
+    text-align: left;
+    border-radius: 20px 20px 5px 5px;
+}
+.chat-head::after {
+    position: absolute;
+    content: "";
+    color: white;
+    font-weight: 700;
+    bottom: 20px;
+    left: 18px;
+    background: url(images/less-than.png) center no-repeat;
+    background-size: cover;
+    height: 15px;
+    width: 20px;
+}
+.chat-head::before {
+    position: absolute;
+    content: "";
+    color: white;
+    font-weight: 700;
+    bottom: 20px;
+    right: 18px;
+    background: url(images/menu-vertical.png) center no-repeat;
+    background-size: cover;
+    height: 15px;
+    width: 20px;
+}
+.chat-head img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 100%, 0.5);
+}
+.profile-name {
+    color: hsl(0, 0%, 100%, 0.8);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.status {
+    color: hsl(0, 0%, 100%, 0.4);
+    font-size: 0.6rem;
+}
+.chat-body {
+    padding: 10px;
+}
+.chat {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.dog-images {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+.dog-images img {
+    width: 50px;
+    border-radius: 10px;
+}
+.chat.right {
+    display: flex;
+    justify-content: end;
+}
+.chat.right p {
+    background-color: white;
+    border-radius: 15px 15px 0 15px;
+    color: hsl(271, 36%, 24%);
+    box-shadow: 0 5px 10px hsl(271, 36%, 24%, 0.1);
+}
+.chat p{
+    background-color: hsl(240, 13%, 92%);
+    max-width: 65%;
+    padding: 7px;
+    border-radius: 15px 15px 15px 0;
+    font-size: 10px;
+    text-align: left;
+    color: hsl(289, 100%, 72%);
+    line-height: 1.4;
+    font-weight: 500;
+}
+.radio-control {
+    background: linear-gradient(to right,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    margin-bottom: 5px;
+    text-align: left;
+    width: 75%;
+    position: relative;
+    padding: 15px 10px;
+    color: hsl(0, 0%, 100%, 0.7);
+    border-radius: 15px 15px 15px 0;
+}
+input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font: inherit;
+    border: 1px solid hsl(0, 0%, 100%, 0.7);
+}
+label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+}
+.price {
+    text-align: right;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    font-size: 1rem;
+}
+.input-control {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+.input-control input {
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+}
+.input-control input::placeholder {
+    color: hsl(276, 7%, 86%);
+}
+.send {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: hsl(271, 36%, 24%);
+}
+.hero-text {
+    max-width: 450px;
+    margin: 50px auto 0;
+}
+h1 {
+    font-size: 2.5rem;
+    color: hsl(271, 36%, 24%);
+    font-weight: 500;
+}
+.hero-text p {
+    margin-top: 20px;
+    line-height: 1.5;
+    color: hsl(271, 36%, 24%, 0.5);
+}
+
+@media (min-width: 900px) {
+    .hero {
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+        margin: auto;
+    }
+    main::after {
+        left: -50px;
+        height: 80vh;
+    }
+    main::before {
+        right: -50px;
+        height: 80vh;
+    }
+    .hero-text {
+        text-align: left;
+    }
+}
